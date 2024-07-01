@@ -1,38 +1,423 @@
-.App {
+/* Existing styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.header-links > * {
+  padding-left: 25px;
+  color: #786659;
+  font-family: Jost;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.header-links > *:hover {
+color: #4D642F;
+}
+
+
+.header-Logo {
+  color: #4D642F;
+  text-decoration: none;
+  font-family: Jomhuria;
+  font-size: 6.25rem;
+  font-style: normal;
+  cursor:pointer;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile links initially hidden */
+.mobile-links {
+  display: none;
   text-align: center;
+  background-color: #f4f4f4;
+  padding: 10px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mobile-links > * {
+  padding: 10px 0;
+  color: #786659;
+  font-family: Jost;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Media query for screen width less than 800px */
+@media (max-width: 800px) {
+  .header-links {
+      display: none;
+  }
+
+  .hamburger-menu {
+      display: block;
+  }
+
+  .header-Logo {
+      font-size: 4rem;
+  }
+
+  .mobile-links {
+      display: block;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.SearchMain{
+  background-color: 
+  #CFD2BC;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+
+.searchQuote{
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin:0%;
+  
+  
+
+}
+
+.searchQuoteOne{
+  color: #4D642F;
+font-family: Jost;
+font-size: 6.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  
+
+}
+.searchQuoteTwo{
+  color: #786659;
+font-family: Jost;
+font-size: 6.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  
+
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 4.5rem;
+  max-width: 1500px;
+  margin: auto;
+}
+.circleButton {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.circleButton:hover {
+  opacity: 0.6; /* Decrease transparency on hover */
+}
+
+.circleButton:active {
+  
+  opacity: 1; /* Fully opaque when active */
+}
+
+
+
+/* FormComponent.css */
+
+/* FormComponent.css */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  
+  gap: 20px;
+  width: 50rem;
+  margin: auto;
+}
+
+.form-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon-input {
+  position: relative;
+}
+
+.datetime-label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 30px;
+}
+
+.icon-input input {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  height: 3rem; /* Increased height */
+  width:20rem;
+  font-size: 20px; /* Increased font size */
+  font-family:Jost;
+  display: flex;
+  flex-direction: row-reverse;
+  
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-button {
+  padding: 15px;
+  margin-left:5rem;
+  
   color: white;
+  width: 22.25rem;
+height: 9.125rem;
+flex-shrink: 0;
+border-radius: 9.375rem;
+background: #4D642F;
+  border: none;
+  color: #FFF;
+font-family: Jost;
+font-size: 3.75rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  
+  cursor: pointer;
+  
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+
+.search-button:hover {
+  background-color: #786659;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Add active/clicked effect */
+
+
+
+
+
+@media (max-width: 1200px) {
+  .container {
+    gap: 3rem; /* Reduce gap between circles */
   }
-  to {
-    transform: rotate(360deg);
+
+  .circleButton {
+    width: 6rem;
+    height: 6rem;
   }
+}
+
+.containerSearchResult {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 1250px) {
+  .containerSearchResult {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1250px) and (min-width: 800px) {
+  .containerSearchResult {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .containerSearchResult {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  width: 390px;
+  margin: 0 auto;
+  background-color:  
+  #D2C8BC;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  
+}
+
+.card-image {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  margin:0px;
+flex-shrink: 0;
+color: #000;
+font-family: Jost;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.card-description {
+  margin:0px;
+  color: #000;
+font-family: Jost;
+font-size: 1.5625rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-bottom: 20px;
+}
+.SearchFeaturecontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.SearchCardFeatures {
+  background-color: #ffffff; /* Green */
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 20px;
+}
+.SearchCardBook{
+  width:360px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 40px;
+  background-color: #786659;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SearchCardBook > *{
+  color: #ffffff;
+  font-family: Jost;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 10px;
+  
+}
+.SearchCardBook:hover{
+  background-color: #4D642F;
+}
+.card:hover{
+  background: #CFD2BC;
+  transform: scale(1.05);
+}
+
+
+.Addcontainer {
+  
+  display: flex;
+  justify-content: space-between; /* Ensures equal spacing between columns */
+  width: 100%;
+   /* Adjust maximum width as needed */
+  margin: 0 auto;
+}
+
+.AddFirst, .AddSecond, .AddThird {
+  flex: 1; /* Each column takes up equal space */
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  background: #D2C8BC;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 20px; /* Adjust gap between columns */
+  color: white;
+  text-align: center;
+}
+.AddFirst{
+  
+  background: #D2C8BC;
+ 
+  color: #4D642F;
+text-align: center;
+font-family: Jost;
+font-size: 2rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.AddSecond{
+  background: #4D642F;
+  color: #CFD2BC;
+text-align: center;
+font-family: Jost;
+font-size: 2rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.AddThird{
+  background: #CFD2BC;  color: #786659;
+  text-align: center;
+  font-family: Jost;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
