@@ -21,9 +21,7 @@ const Search = () => {
           <span className="searchQuoteTwo"> happy pets</span>
         </div>
       </div>
-      <div className="SearchImages">
-        <CircleButtons images={images} />
-      </div>
+      
       <form className="SearchForm">
       <FormComponent />
       </form>

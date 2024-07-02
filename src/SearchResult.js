@@ -6,34 +6,41 @@ const SearchResult = () => {
   // Example data for cards
   const cards = [
     {
-      title: 'Card 1 is frickin crazy cuz its a happy dog running like craxy',
-      description: 'Description for Card 1',
+      title: 'Happy Dog Care',
+      description: 'Kasturi Nagar, Banglore',
+      distance:"5 Km",
       imageUrl: 'image1.jpg',
+      
     },
     {
-      title: 'Card 2',
-      description: 'Description for Card 2',
+      title: 'Tom and Bell Catty Care',
+      description: 'Indira Nagar, Banglore',
+      distance:"8 Km",
       imageUrl: 'image2.jpg',
     },
     {
-      title: 'Card 3',
-      description: 'Description for Card 3',
+      title: 'Fly Free Center',
+      description: 'White Field, Banglore',
+      distance:"23 Km",
       imageUrl: 'image3.jpg',
     },
     {
-      title: 'Card 3',
-      description: 'Description for Card 3',
-      imageUrl: 'image3.jpg',
+      title: 'Stay With Nemo',
+      description: 'Electronic City',
+      distance:"29 Km",
+      imageUrl: 'image4.jpg',
     },
     {
-      title: 'Card 3',
-      description: 'Description for Card 3',
-      imageUrl: 'image3.jpg',
+      title: 'Jumpy Bunny Stop',
+      description: 'Hebbal, Banglore',
+      distance:"30 Km",
+      imageUrl: 'image5.jpg',
     },
     {
-      title: 'Card 3',
-      description: 'Description for Card 3',
-      imageUrl: 'image3.jpg',
+      title: 'Winning Turtle World',
+      description: 'Yelahanka, Banglore',
+      distance:"35 Km",
+      imageUrl: 'image6.jpg',
     },
     // Add more cards as needed
   ];
@@ -45,6 +52,7 @@ const SearchResult = () => {
           key={index}
           title={card.title}
           description={card.description}
+          distance={card.distance}
           imageUrl={card.imageUrl}
         />
       ))}
